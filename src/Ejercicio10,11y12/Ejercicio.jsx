@@ -16,6 +16,7 @@ class RGB{
 export default function Ejercicio() {
 
     const [cambioColor, setCambioColor] = useState(false);
+    const [bloqueoCambioColor, setBloqueoCambioColor] = useState(false)
     let estiloCuadrado = {
         display:'flex', 
         justifyContent : 'center',
@@ -23,36 +24,30 @@ export default function Ejercicio() {
         width: "255px",
         height: "255px"
     }
+    
 
     const Cuadrado = (props)=>{
         let nuevoColor = new RGB(Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256));
         nuevoColor = `rgb(${nuevoColor.red},${nuevoColor.green},${nuevoColor.blue})`
-        if(!cambioColor)
+        if(!cambioColor || bloqueoCambioColor)
         {
             return(
-                <div style={estiloCuadrado} onMouseOver={()=>setCambioColor(true)}></div>
+                <div style={estiloCuadrado} 
+                onMouseOver={()=>setCambioColor(true)}
+                ></div>
             )
         }else{
             return(
-                <div style={{...estiloCuadrado,backgroundColor : nuevoColor}} onMouseOver={()=>setCambioColor(false)}></div>
+                <div style={{...estiloCuadrado,backgroundColor : nuevoColor}} 
+                onMouseOverCapture={()=>setCambioColor(false)} >                      
+                </div>
             )
         }
-
-    }
-
-    function activarCambioColor (bool)
-    {
-        console.log("enTRE");
-        setCambioColor(bool);
-        if(cambioColor)
-        {
-            let nuevoColor = new RGB(Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256));
-            estiloCuadrado = {...estiloCuadrado, backgroundColor: nuevoColor}
         }
-    }
+
   return (
     <div>
-        <Cuadrado></Cuadrado>
+        <Cuadrado onDoubleClick={()=>setBloqueoCambioColor(true)}></Cuadrado>
     </div>
   )
 }
