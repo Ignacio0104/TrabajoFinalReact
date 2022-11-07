@@ -17,7 +17,6 @@ function ComponenteUno() {
   )
 }
 
-
 function ComponenteDos() {
     const state = useContext(miContexto);
   return (
