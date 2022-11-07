@@ -4,6 +4,7 @@ import TaskListComponent from './components/container/task_list';
 import GreetingStyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
+import Ejercicio from './Ejercicio10,11y12/Ejercicio';
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
     {/* Gestión de eventos */}
     {/*<Father></Father>*/}
     {/* <TaskListComponent></TaskListComponent> */}
-    <OptionalRender></OptionalRender>
+    {/*<OptionalRender></OptionalRender>*/}
+    <Ejercicio></Ejercicio>
   </div>
 
   );

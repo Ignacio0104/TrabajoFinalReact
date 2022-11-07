@@ -1,5 +1,17 @@
 import React, {useState} from 'react'
 
+const loggedStyle = {
+    backgroundColor : "green",
+    color: "white",
+    fontWeight: "bold"
+}
+
+const unloggedStyle = {
+    backgroundColor : "tomato",
+    color: "white",
+    fontWeight: "bold"
+}
+
 export default function OptionalRender() {
 
     const [access, setAccess] = useState(true);
@@ -8,16 +20,15 @@ export default function OptionalRender() {
     //LOGIN and LOGOUT
     const LoginButton = (props)=>{
         return(
-            <button onClick={props.logInAction}>Log in</button>
+            <button style={props.style} onClick={props.logInAction}>Log in</button>
         )
     }
 
     const LogoutButton = (props)=>{
         return(
-            <button onClick={props.logOutAction}>Log out</button>
+            <button style={props.style} onClick={props.logOutAction}>Log out</button>
         )
     }
-
 
 
     const updateAccess=()=>{
@@ -46,9 +57,9 @@ export default function OptionalRender() {
     }
     if(access)
     {
-        optionalButton= <LogoutButton logOutAction={logOutAction}></LogoutButton>
+        optionalButton= <LogoutButton style={unloggedStyle} logOutAction={logOutAction}></LogoutButton>
     }else{
-        optionalButton=<LoginButton logInAction={logInAction}></LoginButton>
+        optionalButton=<LoginButton style={loggedStyle} logInAction={logInAction}></LoginButton>
     }
   return (
     <div>
