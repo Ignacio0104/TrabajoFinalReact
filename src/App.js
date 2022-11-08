@@ -5,6 +5,8 @@ import GreetingStyled from './components/pure/greetingStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
 import Ejercicio from './Ejercicio10,11y12/Ejercicio';
+import RegisterFormik from './components/pure/forms/registerFormik';
+import LoginFormix from './components/pure/forms/loginFormix';
 
 function App() {
   return (
@@ -32,9 +34,9 @@ function App() {
     {/*<TaskListComponent></TaskListComponent>*/}
     {/* Gestión de eventos */}
     {/*<Father></Father>*/}
-    {/* <TaskListComponent></TaskListComponent> */}
+    <RegisterFormik></RegisterFormik>
+    {/* <LoginFormix></LoginFormix>  */}
     {/*<OptionalRender></OptionalRender>*/}
-    <Ejercicio></Ejercicio>
   </div>
 
   );
