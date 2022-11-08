@@ -31,10 +31,10 @@ function App() {
       </Ejemplo4> */}
       {/* <Greetingstyled name="Martín"></Greetingstyled> */}
     {/* </header> */}
-    {/*<TaskListComponent></TaskListComponent>*/}
+    <TaskListComponent></TaskListComponent>
     {/* Gestión de eventos */}
     {/*<Father></Father>*/}
-    <RegisterFormik></RegisterFormik>
+    {/* <RegisterFormik></RegisterFormik> */}
     {/* <LoginFormix></LoginFormix>  */}
     {/*<OptionalRender></OptionalRender>*/}
   </div>

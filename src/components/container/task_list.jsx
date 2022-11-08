@@ -5,6 +5,7 @@ import TaskComponent from '../pure/task';
 
 import "../../styles/taks.scss"
 import TaskForm from '../pure/forms/taskForm.jsx';
+import Taskformik from '../pure/forms/taskFormik.jsx';
 
 const TaskListComponent = () => {
     const defaultTask = new Task('Example', 'Default description', false, LEVELS.NORMAL);
@@ -111,7 +112,8 @@ const TaskListComponent = () => {
                     </div>                 
                 </div>
             </div>
-            <TaskForm add={addTask} length={tasks.length}></TaskForm>
+            {/* <TaskForm add={addTask} length={tasks.length}></TaskForm> */}
+            <Taskformik add={addTask} length={tasks.length}></Taskformik>
         </div>
     );
 };

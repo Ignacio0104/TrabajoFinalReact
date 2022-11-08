@@ -84,7 +84,7 @@ export default function RegisterFormik() {
                     <ErrorMessage name="password" component ="div"></ErrorMessage>
                 ) 
             }
-            <label htmlFor='confirm'>Password</label>
+            <label htmlFor='confirm'>Confirm Password</label>
             <Field
             id="confirm"
             name="confirm"
@@ -92,7 +92,7 @@ export default function RegisterFormik() {
             type="password"/>
                 {
                 errors.confirm && touched.confirm &&(
-                    <ErrorMessage name="password" component ="div"></ErrorMessage>
+                    <ErrorMessage name="confirm" component ="div"></ErrorMessage>
                 ) 
             }
             <button type='submit'>Register User</button>
