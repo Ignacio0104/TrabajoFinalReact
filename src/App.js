@@ -9,6 +9,7 @@ import RegisterFormik from './components/pure/forms/registerFormik';
 import LoginFormix from './components/pure/forms/loginFormix';
 import AsyncExample from './components/pure/AsyncExample';
 import ObservableExample from './components/pure/ObservableExample';
+import FetchExample from './components/pure/FetchExample';
 
 function App() {
   return (
@@ -34,8 +35,9 @@ function App() {
       {/* <Greetingstyled name="Martín"></Greetingstyled> */}
     {/* </header> */}
     {/* Ejemplos de asincronia  */}
-    <AsyncExample></AsyncExample>
-    <ObservableExample></ObservableExample>
+    {/* <AsyncExample></AsyncExample> */}
+    {/* <ObservableExample></ObservableExample> */}
+    {<FetchExample></FetchExample>}
     {/* <TaskListComponent></TaskListComponent> */}
     {/* Gestión de eventos */}
     {/*<Father></Father>*/}
