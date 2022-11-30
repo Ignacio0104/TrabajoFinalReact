@@ -7,6 +7,8 @@ import OptionalRender from './components/pure/optionalRender';
 import Ejercicio from './Ejercicio10,11y12/Ejercicio';
 import RegisterFormik from './components/pure/forms/registerFormik';
 import LoginFormix from './components/pure/forms/loginFormix';
+import AsyncExample from './components/pure/AsyncExample';
+import ObservableExample from './components/pure/ObservableExample';
 
 function App() {
   return (
@@ -31,7 +33,10 @@ function App() {
       </Ejemplo4> */}
       {/* <Greetingstyled name="Martín"></Greetingstyled> */}
     {/* </header> */}
-    <TaskListComponent></TaskListComponent>
+    {/* Ejemplos de asincronia  */}
+    <AsyncExample></AsyncExample>
+    <ObservableExample></ObservableExample>
+    {/* <TaskListComponent></TaskListComponent> */}
     {/* Gestión de eventos */}
     {/*<Father></Father>*/}
     {/* <RegisterFormik></RegisterFormik> */}

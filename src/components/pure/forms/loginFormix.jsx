@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom';
 import {Formik,Field,Form} from "formik";
 import * as Yup from "yup";
 
@@ -15,6 +16,12 @@ export default function LoginFormix() {
         email:"",
         password:""
     }
+
+    const Registrar= ()=>{
+        history.push("/registro");
+    }
+
+    const history = useHistory();
   return (
     <div>
         <h4>Login Form</h4>
@@ -22,8 +29,11 @@ export default function LoginFormix() {
             validationSchema= {loginSchema}
             onSubmit={async (values)=>{
                 await new Promise((r)=>setTimeout(r,1000));
-                alert(JSON.stringify(values,null,2))
-                localStorage.setItem("credentials",values)}}               
+                alert(JSON.stringify(values,null,2));
+                await localStorage.setItem("credentials",values)
+                //history.push("/profile");
+                history.push("/dashboard");
+                }}               
             >
             {props=>{
                 const {
@@ -55,12 +65,12 @@ export default function LoginFormix() {
                             </div>
                         )}
                         
-                        <button type='submit'>Login</button>
+                        <button type='submit' onClick={props.login}>Login</button>
                         {isSubmitting ? (<p>Login your credentials...</p>) : null}
+                        <button type='submit' style={{display:"block",margin:"20px"}} onClick={Registrar}>Registrarse</button>
                     </Form>
                 )
-            }}
-                
+            }}               
             </Formik>
     </div>
   )

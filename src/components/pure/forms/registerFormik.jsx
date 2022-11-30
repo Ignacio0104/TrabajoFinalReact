@@ -2,11 +2,13 @@ import React from 'react'
 import {User} from "../../../models/user.class"
 import { ROLES } from '../../../models/roles.enum';
 import {Formik,Form,Field,ErrorMessage} from "formik";
+import { useHistory } from 'react-router-dom';
 import * as Yup from "yup";
 
 
 export default function RegisterFormik() {
     let user = new User();
+    let history= useHistory();
 
     const initialValues= {
         userName:"",
@@ -14,6 +16,10 @@ export default function RegisterFormik() {
         password: "",
         confirm: "",
         role: ROLES.USER
+    }
+
+    const volverHome=()=>{
+        history.push("/");
     }
 
     const registerSchema = Yup.object().shape(
@@ -99,6 +105,7 @@ export default function RegisterFormik() {
             {
                 isSubmitting ? (<p>Sending your credentials...</p>):null
             }
+            <button onClick={volverHome}> Volver al home</button>
         </Form>
       )}
       </Formik>

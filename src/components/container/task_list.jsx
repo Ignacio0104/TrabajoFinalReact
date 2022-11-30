@@ -118,5 +118,4 @@ const TaskListComponent = () => {
     );
 };
 
-
 export default TaskListComponent;
