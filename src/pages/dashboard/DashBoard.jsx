@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from "@mui/material/Button"
+import Button from "@mui/material/Button/index"
 import Copyright from '../../components/pure/Copyright'
 import { useHistory } from 'react-router-dom'
 
