@@ -10,6 +10,8 @@ import LoginFormix from './components/pure/forms/loginFormix';
 import AsyncExample from './components/pure/AsyncExample';
 import ObservableExample from './components/pure/ObservableExample';
 import FetchExample from './components/pure/FetchExample';
+import AxiosExample from './components/pure/AxiosExample';
+import AxiosExampleEjercicio from './components/pure/AxiosExampleEjercicio';
 
 function App() {
   return (
@@ -37,7 +39,9 @@ function App() {
     {/* Ejemplos de asincronia  */}
     {/* <AsyncExample></AsyncExample> */}
     {/* <ObservableExample></ObservableExample> */}
-    {<FetchExample></FetchExample>}
+    {/* {<FetchExample></FetchExample>} */}
+    {/* <AxiosExample></AxiosExample> */}
+    <AxiosExampleEjercicio></AxiosExampleEjercicio>
     {/* <TaskListComponent></TaskListComponent> */}
     {/* Gestión de eventos */}
     {/*<Father></Father>*/}

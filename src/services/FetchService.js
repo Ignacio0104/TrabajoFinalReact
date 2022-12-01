@@ -18,3 +18,21 @@ export const getUserDetails = async (id)=>{
     console.log(`Status: ${response.status}`)
     return response.json();
 }
+
+export const login = async (email,password)=>{ //No funciona porque la API responde mal
+    let body = {
+        "email":email,
+        "password": password
+    }
+
+    let response = await fetch("https://reqres.in/api/login",
+    {
+        method:"POST",
+        headers : {
+            "Content-type": "applicacion/json"
+        },
+        body: JSON.stringify(body),
+    });
+
+    return response.json();
+}
