@@ -12,6 +12,7 @@ import ObservableExample from './components/pure/ObservableExample';
 import FetchExample from './components/pure/FetchExample';
 import AxiosExample from './components/pure/AxiosExample';
 import AxiosExampleEjercicio from './components/pure/AxiosExampleEjercicio';
+import AxiosCRUDExample from './components/pure/AxiosCRUDExample';
 
 function App() {
   return (
@@ -41,7 +42,8 @@ function App() {
     {/* <ObservableExample></ObservableExample> */}
     {/* {<FetchExample></FetchExample>} */}
     {/* <AxiosExample></AxiosExample> */}
-    <AxiosExampleEjercicio></AxiosExampleEjercicio>
+    <AxiosCRUDExample></AxiosCRUDExample>
+    {/* <AxiosExampleEjercicio></AxiosExampleEjercicio> */}
     {/* <TaskListComponent></TaskListComponent> */}
     {/* Gestión de eventos */}
     {/*<Father></Father>*/}

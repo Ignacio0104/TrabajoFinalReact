@@ -15,7 +15,7 @@ export default function AxiosExample() {
             (response)=>{
                 if(response.status===200)
                 {          
-                    setUser(response.data.results);
+                    setUser(response.data.results[0]);
                     console.log(user);
                 }
                 
@@ -27,8 +27,9 @@ export default function AxiosExample() {
     <div>
       <h1>Axios example</h1>
       {user != null?
-      (<h2>Name: {user.name} {user.name}</h2>):
+      (<h2>Name: {user.name.title} {user.name.first}</h2>):
       (<h2>No se encontró el usuario solicitado</h2>)}
+      <button onClick={obtainUser}>Random User</button>
     </div>
   )
 }

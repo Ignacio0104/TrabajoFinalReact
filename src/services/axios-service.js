@@ -1,5 +1,7 @@
 import APIRequest from "../utils/config/axio.config";
 
+
+
 export default function getRandomUser(){
     return APIRequest.get("/",  //Esto seria lo mismo que poner axios.get, pero de esta forma usamos nuestra config
     {
